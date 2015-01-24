@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+
+repositories {
+	mavenCentral()
+	
+	// Spock snapshots are available from the Sonatype OSS snapshot repository
+	maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+
+dependencies {
+	testCompile "org.spockframework:spock-core:1.0-groovy-2.3-SNAPSHOT"
+	compile gradleApi()
+	compile localGroovy()
+}
